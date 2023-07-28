@@ -6,6 +6,19 @@
 	"image": "mcr.microsoft.com/devcontainers/typescript-node:1-18-bullseye",
 	"features": {
 		"ghcr.io/devcontainers-contrib/features/angular-cli:2": {}
+	},
+	"customizations": {
+		"vscode": {
+			"extensions": [
+				"lucono.karma-test-explorer",
+				"angular.ng-template",
+				"johnpapa.angular2",
+				"alexiv.vscode-angular2-files",
+				"esbenp.prettier-vscode",
+				"dbaeumer.vscode-eslint",
+				"shardulm94.trailing-spaces"
+			]
+		}
 	}
 
 	// Features to add to the dev container. More info: https://containers.dev/features.
