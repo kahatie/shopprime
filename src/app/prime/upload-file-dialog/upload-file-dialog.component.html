@@ -1,0 +1,17 @@
+<h2 mat-dialog-title>prime Crop</h2>
+<mat-dialog-content class="mat-typography">
+    <image-cropper
+        [imageFile]="data.file"
+        [maintainAspectRatio]="false"
+        format="png"
+        (imageCropped)="imageCropped($event)"
+        (imageLoaded)="imageLoaded()"
+        (cropperReady)="cropperReady()"
+        (loadImageFailed)="loadImageFailed()"
+        [autoCrop]="false"
+    ></image-cropper>
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+    <button mat-button mat-dialog-close>Cancel</button>
+    <button mat-button (click)="crop()" cdkFocusInitial>Crop</button>
+</mat-dialog-actions>
