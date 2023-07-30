@@ -8,7 +8,7 @@
 <mat-grid-list cols="2" rowHeight="2:1">
     <mat-grid-tile><img *ngIf="previewUrl" [src]="previewUrl"/></mat-grid-tile>
     <mat-grid-tile>
-        <table mat-table *ngIf="ocrResult" [dataSource]="ocrResult">
+        <table mat-table [dataSource]="ocrResult()">
 
             <!--- Note that these columns can be defined in any order.
                   The actual rendered columns are set as a property on the row definition" -->
@@ -28,7 +28,7 @@
     </mat-grid-tile>
     <mat-grid-tile><canvas #canvas></canvas></mat-grid-tile>
     <mat-grid-tile>
-        <table mat-table *ngIf="canvasResult" [dataSource]="canvasResult">
+        <table mat-table [dataSource]="canvasResult()">
             <!--- Note that these columns can be defined in any order.
                   The actual rendered columns are set as a property on the row definition" -->
             <!-- Name Column -->
@@ -46,7 +46,3 @@
         </table>
     </mat-grid-tile>
 </mat-grid-list>
-<p>
-    {{ocrResult | json}}
-    {{canvasResult | json}}
-</p>
