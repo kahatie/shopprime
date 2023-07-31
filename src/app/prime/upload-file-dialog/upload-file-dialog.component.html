@@ -5,13 +5,12 @@
         [maintainAspectRatio]="false"
         format="png"
         (imageCropped)="imageCropped($event)"
-        (imageLoaded)="imageLoaded()"
-        (cropperReady)="cropperReady()"
         (loadImageFailed)="loadImageFailed()"
         [autoCrop]="false"
     ></image-cropper>
+    <canvas hidden #canvas></canvas>
 </mat-dialog-content>
 <mat-dialog-actions align="end">
     <button mat-button mat-dialog-close>Cancel</button>
-    <button mat-button (click)="crop()" cdkFocusInitial>Crop</button>
+    <button mat-button (click)="cropImage()" cdkFocusInitial>Crop</button>
 </mat-dialog-actions>
